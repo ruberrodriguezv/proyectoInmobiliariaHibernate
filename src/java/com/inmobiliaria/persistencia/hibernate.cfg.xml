@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost/inmobiliaria</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.connection.password">1234</property>
+    <mapping resource="com/inmobiliaria/model/Genero.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/Parqueadero.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/NumeroBanios.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/TiempoConstruido.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/TipoInmueble.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/InformacionPrincipalHasEspecificacionesVarias.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/EspecificacionesVarias.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/RangoPrecios.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/Estrato.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/IdentificacionInmobiliaria.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/InformacionPrincipal.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/Ciudad.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/NumeroPlantas.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/Pais.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/RangoPreciosAjustado.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/Roles.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/Estado.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/Zona.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/TipoPropiedad.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/Garaje.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/Cocina.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/Opcion.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/Departamento.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/Usuario.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/NumeroAlcobas.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/Condicion.hbm.xml"/>
+    <mapping resource="com/inmobiliaria/model/TipoOperacion.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

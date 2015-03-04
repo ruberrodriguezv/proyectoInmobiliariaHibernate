@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 4/03/2015 09:08:21 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.inmobiliaria.model.RangoPreciosAjustado" table="rango_precios_ajustado" catalog="inmobiliaria" optimistic-lock="version">
+        <id name="idRangoPreciosAjustado" type="java.lang.Integer">
+            <column name="id_rango_precios_ajustado" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="rangoPrecios" class="com.inmobiliaria.model.RangoPrecios" fetch="select">
+            <column name="rango_precios_id_rango_precios" not-null="true" />
+        </many-to-one>
+        <many-to-one name="tipoOperacion" class="com.inmobiliaria.model.TipoOperacion" fetch="select">
+            <column name="tipo_operacion_id_tipo_operacion" not-null="true" />
+        </many-to-one>
+        <set name="informacionPrincipals" table="informacion_principal" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="rango_precios_ajustado_id_rango_precios_ajustado" not-null="true" />
+            </key>
+            <one-to-many class="com.inmobiliaria.model.InformacionPrincipal" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 4/03/2015 09:08:21 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.inmobiliaria.model.NumeroPlantas" table="numero_plantas" catalog="inmobiliaria" optimistic-lock="version">
+        <id name="idNumeroPlantas" type="java.lang.Integer">
+            <column name="id_numero_plantas" />
+            <generator class="identity" />
+        </id>
+        <property name="cantidadPlantas" type="string">
+            <column name="cantidad_plantas" length="10" not-null="true" />
+        </property>
+        <set name="informacionPrincipals" table="informacion_principal" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="numero_plantas_id_numero_plantas" not-null="true" />
+            </key>
+            <one-to-many class="com.inmobiliaria.model.InformacionPrincipal" />
+        </set>
+    </class>
+</hibernate-mapping>
